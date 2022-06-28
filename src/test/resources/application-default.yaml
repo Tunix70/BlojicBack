@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+blojic:
+  db:
+    url: jdbc:tc:postgresql:11-alpine:///

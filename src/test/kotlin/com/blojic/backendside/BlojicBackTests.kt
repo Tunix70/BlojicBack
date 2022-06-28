@@ -9,5 +9,4 @@ class BlojicBackTests {
     @Test
     fun contextLoads() {
     }
-
 }

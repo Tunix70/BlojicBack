@@ -1,10 +1,15 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/blojic
-    username: postgres
-    password: test
+    url: ${blojic.db.url}
+    username: ${blojic.db.username}
+    password: ${blojic.db.password}
     driver-class-name: org.postgresql.Driver
+  flyway:
+    url: ${blojic.db.url}
+    user: ${blojic.db.username}
+    password: ${blojic.db.password}
   jpa:
+    show-sql: true
     generate-ddl: true
     hibernate:
       ddl-auto: update
