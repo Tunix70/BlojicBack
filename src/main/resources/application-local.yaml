@@ -1,5 +1,0 @@
-blojic:
-  db:
-    url: jdbc:postgresql://localhost:5432/blojic
-    username: postgres
-    password: test
