@@ -1,6 +1,6 @@
 package com.blojic.backendside.controller
 
-import com.blojic.backendside.persistence.entity.Document
+import com.blojic.backendside.dto.DocumentDto
 import com.blojic.backendside.service.DocumentService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/document/")
 class DocumentController(private val documentService: DocumentService) {
     @GetMapping
-    fun getDocuments(): ResponseEntity<List<Document>> {
+    fun getDocuments(): ResponseEntity<List<DocumentDto>> {
         val documentList = documentService.findAll()
         return ResponseEntity(documentList, HttpStatus.OK)
     }
